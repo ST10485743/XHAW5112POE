@@ -1,0 +1,820 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* ===== GLOBAL COLORS ===== */
+:root {
+  --primary-color: #0c6d38;       /* Deep green for growth and empowerment */
+  --secondary-color: #f4b400;     /* Warm yellow for optimism */
+  --light-bg: #f8f8f8;
+  --dark-text: #222;
+  --light-text: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 15px 50px;
+  flex-wrap: wrap;
+}
+
+header .logo img {
+  height: 60px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+nav ul li a,
+nav ul a {
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul a:hover {
+  color: var(--secondary-color);
+}
+
+/* ===== HERO SECTIONS ===== */
+/* Home Page Hero */
+#hero {
+  background: linear-gradient(rgba(27, 124, 70, 0.75), rgba(27, 124, 70, 0.75)),
+              url("Images/homepage-banner.jpg") center/cover no-repeat;
+  color: var(--light-text);
+  text-align: center;
+  padding: 120px 20px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+#hero a {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#hero a:hover {
+  background-color: #ffd54f;
+}
+
+/* First Aid Hero */
+#course-hero-first-aid {
+  background-image: linear-gradient(rgba(200, 0, 0, 0.7), rgba(200, 0, 0, 0.7)),
+                    url("Images/first-aid.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text);
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+/* Sewing Hero */
+#course-hero-sewing {
+  background-image: linear-gradient(rgba(255, 153, 153, 0.7), rgba(255, 153, 153, 0.7)),
+                    url("Images/sewing.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text);
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+/* Landscaping Hero */
+#course-hero-landscaping {
+  background-image: linear-gradient(rgba(46, 125, 50, 0.7), rgba(46, 125, 50, 0.7)),
+                    url("Images/landscaping-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text);
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+/* Life Skills Hero */
+#course-hero-life-skills {
+  background-image: linear-gradient(rgba(27, 94, 32, 0.7), rgba(27, 94, 32, 0.7)),
+                    url("Images/life-skills-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text);
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+/* Hero text */
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #ffd54f;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+main section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--secondary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+main p, main li {
+  font-size: 1rem;
+  color: #555;
+}
+
+ul {
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+/* ===== HOME PAGE HISTORY SECTION ===== */
+#history {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  background-color: var(--light-bg);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#history h2 {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+#history p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ===== CALL TO ACTION SECTION ===== */
+#call-to-action {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#call-to-action h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#call-to-action p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+#call-to-action a {
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#call-to-action a:hover {
+  background-color: #ffd54f;
+}
+
+/* ===== COURSE IMAGE SECTION ===== */
+.course-image-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--light-bg);
+}
+
+.course-image-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.course-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  main {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  main section {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  #hero {
+    padding: 80px 15px;
+  }
+
+  #history, #call-to-action {
+    padding: 60px 15px;
+  }
+
+  .course-image-section {
+    padding: 30px 15px;
+  }
+}
+
+/* ===== CHILD MINDING HERO ===== */
+#course-hero-child-minding {
+  background-image: linear-gradient(
+      rgba(27, 94, 32, 0.7),
+      rgba(27, 94, 32, 0.7)
+    ),
+    url("I");
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text);
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+/* ensure hero text sizing follows your shared .hero-content rules */
+#course-hero-child-minding .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#course-hero-child-minding .hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* ===== GLOBAL COLORS ===== */
+:root {
+  --primary-color: #1b7c46;       /* Deep green for growth and empowerment */
+  --secondary-color: #f4b400;     /* Warm yellow for optimism */
+  --light-bg: #f8f8f8;
+  --dark-text: #222;
+  --light-text: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 15px 50px;
+  flex-wrap: wrap;
+}
+
+header .logo img {
+  height: 60px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+nav ul li a,
+nav ul a {
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul a:hover {
+  color: var(--secondary-color);
+}
+
+/* ===== HERO SECTION ===== */
+#course-hero-garden-maintenance {
+  background-image: linear-gradient(rgba(46, 125, 50, 0.7), rgba(46, 125, 50, 0.7)),
+                    url("Images/Garden-maintenance.webp"); /* Replace with actual image */
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text);
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+main section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--secondary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+main p, main li {
+  font-size: 1rem;
+  color: #555;
+}
+
+ul {
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+/* ===== COURSE IMAGE SECTION ===== */
+.course-image-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--light-bg);
+}
+
+.course-image-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.course-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  main {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  main section {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  #course-hero-garden-maintenance {
+    padding: 80px 15px;
+  }
+
+  .course-image-section {
+    padding: 30px 15px;
+  }
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* ===== GLOBAL COLORS ===== */
+:root {
+  --primary-color: #1b7c46;       /* Deep green for banners, header, footer */
+  --secondary-color: #f4b400;     /* Yellow for accents and highlights */
+  --light-text: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 15px 50px;
+  flex-wrap: wrap;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+nav ul li a,
+nav ul a {
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul a:hover {
+  color: var(--secondary-color);
+}
+
+/* ===== HERO SECTION ===== */
+#course-hero {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#course-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#course-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+/* ===== MAIN FORM ===== */
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+form h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--secondary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.courses {
+  margin-top: 15px;
+}
+
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.course-item input {
+  margin-right: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #145c30;
+}
+
+#total-fee {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  main {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  #course-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #course-hero p {
+    font-size: 1rem;
+  }
+}
+
